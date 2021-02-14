@@ -98,3 +98,31 @@ function my_keydown(e) {
         console.log("C");
     }
 }
+function up() {
+    player_y=player_y-block_height;
+    console.log("Block image height is " + block_height);
+    console.log("When up arrow key is pressed, x=" + player_x + "| y=" + player_y);
+    canvas.remove(player_object);
+    player_update();
+}
+function down() {
+    player_y=player_y+block_height;
+    console.log("Block image height is " + block_height);
+    console.log("When down arrow key is pressed, x=" + player_x + "| y=" + player_y);
+    canvas.remove(player_object);
+    player_update();
+}
+function left() {
+    player_x=player_x-block_width;
+    console.log("Block image width is " + block_width);
+    console.log("When left arrow key is pressed, x=" + player_x + "| y=" + player_y);
+    canvas.remove(player_object);
+    player_update();
+}
+function right() {
+    player_x=player_x+block_width;
+    console.log("Block image width is " + block_width);
+    console.log("When right arrow key is pressed, x=" + player_x + "| y=" + player_y);
+    canvas.remove(player_object);
+    player_update();
+}
